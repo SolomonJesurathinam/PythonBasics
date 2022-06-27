@@ -6,6 +6,7 @@ from mlxtend.evaluate import bias_variance_decomp
 
 #Bias Variance Tradeoff (Bias is ignore/missing data, variance is considering all data)
 
+#Edit all testing
 
 df = pd.read_csv('weight-height.csv')
 df = df[df['Gender']=='Female']
