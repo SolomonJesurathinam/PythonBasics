@@ -43,7 +43,7 @@ plt.scatter(x_test, y_test, color = 'blue')
 plt.scatter(x_test, lin.predict(x_test), color = 'red')
 plt.show()
 
-model = LinearRegression()
+model = lin
 print(model)
 # estimate bias and variance
 mse, bias, var = bias_variance_decomp(model, x_train, y_train, x_test, y_test, loss='mse', num_rounds=200, random_seed=1)
