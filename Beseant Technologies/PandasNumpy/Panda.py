@@ -63,15 +63,15 @@ entireDf = readcsV1.aggregate(['sum','min','max'])
 
 #Data Manipulattions
 
-readnew = pd.read_csv("test.csv")
+readnew = pd.read_csv("../test.csv")
 #print(readnew.to_string())
 
 readnew['Gender'] = readnew['Gender'].map({"Male":'m', "Female":'f'}).astype("str")
 #print(readnew)
 
 #Merge
-read1 = pd.read_csv("Dummycsv.csv",encoding_errors='ignore')
-read2 = pd.read_csv("Dummycsv1.csv",encoding_errors='ignore')
+read1 = pd.read_csv("../Dummycsv.csv", encoding_errors='ignore')
+read2 = pd.read_csv("../Dummycsv1.csv", encoding_errors='ignore')
 
 mergeCsv = pd.merge(read2,read1,on='S.No')
 #print(mergeCsv.to_string())
@@ -83,7 +83,7 @@ print(mergeCsv.groupby("Year").get_group(2003))
 print(mergeCsv[~mergeCsv.duplicated("Year")])
 
 #Statitics Mean median mode
-stats = pd.read_csv("Statistics.csv",usecols=['Sub1','Sub2'])
+stats = pd.read_csv("../Statistics.csv", usecols=['Sub1', 'Sub2'])
 print(stats.to_string())
 
 mean = stats.mean(axis=1)
@@ -98,7 +98,7 @@ print(mode)
 
 #skewness
 
-loadcs = pd.read_csv("nba.csv",encoding_errors='ignore')
+loadcs = pd.read_csv("../nba.csv", encoding_errors='ignore')
 print(loadcs.skew(axis=0,skipna=True))
 
 #Normal Distribution

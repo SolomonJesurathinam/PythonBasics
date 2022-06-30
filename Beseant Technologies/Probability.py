@@ -23,7 +23,7 @@ prob_percent = df.groupby('Gender')['Survived'].mean()
 #print(prob)
 #print(prob_percent)
 
-load = pd.read_csv("tested.csv")
+load = pd.read_csv("../tested.csv")
 prob_percent = load.groupby('Age')['Survived'].mean()
 #print(prob_percent)
 

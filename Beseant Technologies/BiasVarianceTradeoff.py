@@ -8,7 +8,7 @@ from mlxtend.evaluate import bias_variance_decomp
 
 #Edit all testing
 
-df = pd.read_csv('weight-height.csv')
+df = pd.read_csv('../weight-height.csv')
 df = df[df['Gender']=='Female']
 df = df[:]
 print(df.head())

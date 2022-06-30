@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import pearsonr
 
-read_csv = pd.read_csv("weight-height.csv")
+read_csv = pd.read_csv("../weight-height.csv")
 print(read_csv.head())
 
 x = read_csv['Height']

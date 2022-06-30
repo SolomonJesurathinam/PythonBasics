@@ -23,7 +23,7 @@ def plotting1(Title,totalX,totalY,xvalue,yvalue,FullValueLabel,Predictedlabel):
     plt.show()
 
 #read data
-df = pd.read_csv("weight-height.csv")
+df = pd.read_csv("../weight-height.csv")
 gender = input("Enter Male/Female/both to calculate:").strip().lower()
 if(gender=="male"):
     df = df[df['Gender']=='Male']
