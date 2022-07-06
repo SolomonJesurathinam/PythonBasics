@@ -11,7 +11,7 @@ x = data_csv.drop("Country Name",axis=1)
 x = x.columns.tolist()
 
 #Yvalue
-country = input("Enter the country to plot graph: ").strip().capitalize()
+country = str(input("Enter the country to plot graph: ")).strip()
 index = data_csv[data_csv["Country Name"] == country].index[0]
 print(index)
 y = np.reshape(data_csv.loc[index:index].drop("Country Name", axis=1).values.tolist(),(-1, 1))
